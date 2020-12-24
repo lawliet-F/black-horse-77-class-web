@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+</head>
+<body>
+    <button>点我点我</button>
+    <script>
+        document.querySelector('button').onclick=function(){
+            alert('大傻逼 让你点就点')
+            document.querySelector('button').onclick()
+        }
+    </script>
+</body>
+</html>
