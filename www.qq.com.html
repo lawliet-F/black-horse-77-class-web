@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+    <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+            font-size: 100px;
+            color: orchid;
+        }
+    </style>
+</head>
+
+<body>
+    <button>点我点我</button>
+    <script>
+        let body = document.querySelector('body');
+        document.querySelector('button').onclick = function () {
+            // alert('大傻逼 让你点就点')
+            // body.style.backgroundColor='orangered'
+            // document.querySelector('button').onclick()
+            // 随机获取一个rgb的颜色
+            // rgb(255,255,255)——》每一位的范围：0~255
+            body.innerHTML='大傻逼'
+            var r = parseInt(Math.random() * 256);
+            var g = parseInt(Math.random() * 256);
+            var b = parseInt(Math.random() * 256);
+            var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+            console.log(color);
+
+            // 以下操作是后面的webAPI的内容，今天看看就行------------------------------------------------------
+
+            // 把得到的颜色设置给body标签
+            document.body.style.backgroundColor = color;
+
+            // 定时器
+            setInterval(function () {
+                var r = parseInt(Math.random() * 256);
+                var g = parseInt(Math.random() * 256);
+                var b = parseInt(Math.random() * 256);
+                var color = 'rgb(' + r + ',' + g + ',' + b + ')';
+                console.log(color);
+
+                // 把得到的颜色设置给body标签
+                document.body.style.backgroundColor = color;
+            }, 100)
+        }
+    </script>
+</body>
+
+</html>
